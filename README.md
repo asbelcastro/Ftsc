@@ -38,4 +38,8 @@ Time window - As the time window length is defined 60s and the epoch starts on 1
 `[INFO] ------------------------------------------------------------------------`
 
 ### Running
-`java -jar target/challenge-01.00.00.jar /Users/Belcastro/Documents/Profissional/Fyber/data_scala.txt`
+`java -jar target/challenge-01.00.00.jar <TimeSerieFilePath>`
+
+Where
+
+`<TimeSerieFilePath> - Absolute path for time series file`
