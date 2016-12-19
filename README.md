@@ -10,6 +10,7 @@ Time window - As the time window length is defined 60s and the epoch starts on 1
 
 ### Building
 `cd <GitRepository>/Ftsc`
+
 `mvn clean package`
 
 **All tests must pass as below:**
