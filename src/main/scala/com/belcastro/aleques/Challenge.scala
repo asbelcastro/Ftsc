@@ -90,7 +90,7 @@ object Challenge {
         timeWindowData += measurement
 
         if (data.hasNext) processTimeWindow(parse(data.next))
-        else consolidate(timeWindowData)
+        else println(toOutput(consolidate(timeWindowData)))
       }
 
       processTimeWindow(firstMeasurement)
