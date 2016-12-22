@@ -1,9 +1,11 @@
 ## Ftsc - Fyber time series challenge
 
 ### Assumptions
-**Time window** - As the time window length is 60 and the epoch starts on 1970-01-01 00:00:00 I considered that, a time window is exactly one minute based on beginning of the epoch and the very second on the time window is inclusive. Morover every single row on the report shows the first second in the time window making the report easier to be read and standardized.
+**Data** - Expected data already sorted by epoch to consolidate the time window sequentially. This approach reads line-by-line the data file avoiding full scan to compute and out of memory in case of data file larger than memory of computing machine. 
 
-**Project** - Maven project, Java 8 is required once I used java.time to define time window, Scala version is 2.11.8 and JUnit for testing.
+**Time window** - Every single line of the report shows the very first epoch of the time window. I've assumed that to standardized the report.
+
+**Project** - Maven project, Scala version 2.11.8 and JUnit for testing.
 
 ### Cloning
 `git clone https://github.com/asbelcastro/Ftsc.git`
@@ -23,11 +25,11 @@
 
 `Running com.belcastro.aleques.ChallengeTest`
 
-`Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.523 sec`
+`Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.523 sec`
 
 `Results :`
 
-`Tests run: 10, Failures: 0, Errors: 0, Skipped: 0`
+`Tests run: 9, Failures: 0, Errors: 0, Skipped: 0`
 
 **and building must succeed as well:**
 
@@ -38,6 +40,6 @@
 `[INFO] ------------------------------------------------------------------------`
 
 ### Running
-`java -jar target/challenge-01.00.00.jar <TimeSerieFilePath>`
+`java -jar target/challenge-01.01.00.jar <TimeSerieFilePath>`
 
 Where `<TimeSerieFilePath> - Absolute path for time series file`
